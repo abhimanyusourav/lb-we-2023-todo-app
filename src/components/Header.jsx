@@ -23,7 +23,7 @@ import {
 } from "@mui/material/styles";
 
 const violetBase = "#7F00FF";
-const violetMain = alpha(violetBase, 0.7);
+const violetMain = alpha(violetBase, 1);
 
 const theme = createTheme({
   palette: {
@@ -38,7 +38,7 @@ const theme = createTheme({
 });
 
 const drawerWidth = 240;
-const navItems = ["Home", "About"];
+const navItems = []; 
 
 function Header(props) {
   const { window } = props;
@@ -87,9 +87,9 @@ function Header(props) {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, fontWeight: 600, textAlign: 'center' }}
             >
-              To-Do List
+              My To-Do List
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
